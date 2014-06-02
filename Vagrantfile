@@ -21,7 +21,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, path: "install-ruby.sh"
   config.vm.provision :shell, path: "install-apache.sh"
   config.vm.provision :shell, path: "install-cyberdojo.sh"
-
-  config.vm.provision :docker
-  config.vm.provision :shell, inline: "gpasswd -a www-data docker"
 end

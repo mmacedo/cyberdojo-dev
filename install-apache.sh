@@ -23,13 +23,13 @@ apt-get install -y libapache2-mod-passenger
 a2enmod passenger
 
 # Configure locale
-echo <<SCRIPT
+cat <<SCRIPT >> ~/.bash_profile
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF-8
 dpkg-reconfigure locales
-SCRIPT >> ~/.bash_profile
+SCRIPT
 source ~/.bash_profile
 
 # Listen to port 3000
