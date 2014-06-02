@@ -2,6 +2,8 @@
 set -e # Exit on error
 
 cd /var/www/cyberdojo
+source /usr/local/rvm/scripts/rvm
+rvm use 2.1.2
 bundle install
 bundle exec rake db:migrate
 
